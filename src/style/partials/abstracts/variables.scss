@@ -1,0 +1,33 @@
+// Overrides
+$grid-gutter-width: 40px !default;
+$border-radius-base:  4px !default;
+$padding-base-vertical: 14px !default;
+
+$input-border-focus:  $brand-primary !default;
+$form-group-margin-bottom:       30px !default;
+
+$brand-primary: #52d3aa !default;
+$brand-secondary: #3f95ea !default;
+$brand-white: #fff;
+$brand-black: #000;
+$brand-darker: #444;
+$brand-gray: #ccc;
+$brand-lighter: #e9e9e9;
+$brand-body-color: #818892;
+$brand-selection-color: #f9f6f0;
+$brand-overlay-color: #3b3d40;
+$brand-bg-color: $brand-white;
+
+:root {
+	--brand-primary: $brand-primary;
+	--brand-secondary: #52d3aa;
+	--brand-white: $brand-white;
+	--brand-black: $brand-black;
+	--brand-darker: $brand-darker;
+	--brand-gray: $brand-gray;
+	--brand-lighter: $brand-lighter;
+	--brand-body-color: $brand-body-color;
+	--brand-selection-color: $brand-selection-color;
+	--brand-overlay-color: $brand-overlay-color;
+	--brand-bg-color: $brand-white;
+}

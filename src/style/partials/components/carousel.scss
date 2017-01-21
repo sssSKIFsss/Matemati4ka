@@ -1,0 +1,32 @@
+.carousel {
+	&__slogan {
+		position: absolute;
+		top: 30%;
+		left: 30%;
+		right: 15%;
+		text-align: center;
+		z-index: 20;
+		color: $brand-lighter;
+		@media screen and (width <= 991px) {top: 24%;}
+	}
+	&__img {
+		width: 100%;
+	}
+	.item {
+		.carousel-caption {
+			top: 47%;
+			left: 30%;
+			right: 15%;
+			q, a {color: $brand-lighter;}
+			q {font-style: italic;}
+			@media screen and (width <= 991px) {top: 43%;}
+		}
+	}
+	.carousel-indicators {
+		bottom: 70px;
+	}
+	@media screen and (width <= 768px) {
+		visibility: hidden;
+		height: 150px;
+	}
+}

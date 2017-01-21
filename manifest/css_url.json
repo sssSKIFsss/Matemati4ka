@@ -1,0 +1,10 @@
+{
+  "../../../../images/": "../img/",
+  "../../../images/": "../img/",
+  "../../images/": "../img/",
+  "../images/": "../img/",
+  "../../../../fonts/": "../fonts/",
+  "../../../fonts/": "../fonts/",
+  "../../fonts/": "../fonts/",
+  "../fonts/": "../fonts/"
+}

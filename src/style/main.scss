@@ -1,0 +1,41 @@
+// VENDOR --------------------------------------------------------------------
+
+	// JavaScript - можно грузить из 'bower_components'
+		// Magnific Popup for JS
+		@import "../../bower_components/magnific-popup/dist/magnific-popup.css";
+		// Bootstrap
+		@import "./vendors/bootstrap.css";
+		@import "./vendors/bootstrap/mixins";
+		@import "./vendors/bootstrap/variables";
+
+	// Разное
+		// Animate.style
+		@import "./vendors/animate.css";
+
+// MODULES AND PARTIALS ------------------------------------------------------
+
+	// добавляем описание спрайта, не красивое решение
+	@import "../../tmp/style/sprite";
+
+	//	@import "./partials/base/reset";
+	@import "./partials/base/typography";
+
+	@import "./partials/abstracts/mixins";
+	@import "./partials/abstracts/variables";
+
+	@import "./partials/pages/article";
+	@import "./partials/pages/home";
+
+	@import "./partials/layout/header";
+	@import "./partials/layout/footer";
+	//	@import "./partials/layout/forms";
+	//	@import "./partials/layout/sidebar";
+	//	@import "./partials/layout/grid";
+
+	@import "./partials/components/images";
+  @import "./partials/components/carousel";
+  @import "./partials/components/accordion";
+	@import "./partials/components/video-button";
+  @import "./partials/components/gotop-button";
+	@import "./partials/components/social-buttons";
+	@import "./partials/components/tables";

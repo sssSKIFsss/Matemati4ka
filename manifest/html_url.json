@@ -1,0 +1,20 @@
+{
+  "../../../images/": "img/",
+  "../../images/": "img/",
+  "../images/": "img/",
+  "images/": "img/",
+
+  "../../../style/main.scss": "css/main.css",
+  "../../style/main.scss": "css/main.css",
+  "../style/main.scss": "css/main.css",
+  "style/main.scss": "css/main.css",
+
+  "../../../js/": "js/",
+  "../../js/": "js/",
+  "../js/": "js/",
+  "../../../js/vendors/": "js/",
+  "../../js/vendors/": "js/",
+  "../js/vendors/": "js/",
+  "js/vendors/": "js/",
+  "../../../bower_components/respond/dest/": "js/"
+}

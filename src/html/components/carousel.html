@@ -1,0 +1,58 @@
+<!-- Карусель -->
+<div id="myCarousel" class="carousel slide" data-interval="8000" data-ride="carousel">
+	<!-- Индикаторы для карусели -->
+	<ol class="carousel-indicators">
+		<!-- Перейти к 0 слайду карусели с помощью соответствующего индекса data-slide-to="0" -->
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		 <!--Перейти к 1 слайду карусели с помощью соответствующего индекса data-slide-to="1"-->
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<!-- Перейти к 2 слайду карусели с помощью соответствующего индекса data-slide-to="2" -->
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<!-- Слайды карусели -->
+	<div class="carousel-inner">
+		<h1 class="carousel__slogan">Чему бы ты ни учился, ты учишься для себя.</h1>
+		<!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->
+		<!-- Слайд №1 -->
+		<div class="item active">
+			<img class="carousel__img" src="../../images/slider1.jpg" alt="Лекция по математике">
+			<div class="carousel-caption to-animate">
+				<q>Математика полезна уже тем, что она трудна.</q>
+				<a href="https://ru.wikipedia.org/wiki/Александров,_Александр_Данилович"
+				target="_blank"
+				title="Александр Данилович Александров о математике"> Александров&nbsp;А.Д.</a>
+			</div>
+		</div>
+		<!-- Слайд №2 -->
+		<div class="item">
+			<img class="carousel__img" src="../../images/slider2.jpg" alt="Школьник-вундеркинд">
+			<div class="carousel-caption to-animate">
+				<q> Везде, где это возможно, считайте. </q>
+				<a href="https://ru.wikipedia.org/wiki/Гальтон,_Френсис"
+					 target="_blank"
+					 title="Фрэнсис Гальтон о математике"> Френсис&nbsp;Гальтон</a>
+			</div>
+		</div>
+		<!-- Слайд №3 -->
+		<div class="item">
+			<img class="carousel__img" src="../../images/slider3.jpg" alt="Преподаватель у доски">
+			<div class="carousel-caption to-animate">
+				<q> Великая книга природы написана математическими символами. </q>
+				<a href="https://ru.wikipedia.org/wiki/Галилейд,_Галилео"
+					 target="_blank"
+					 title="Галилей о математике"> Галилео&nbsp;Галилей</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Навигация для карусели -->
+	<!-- В данном случае нам не понадобится, поэтому закомментируем -->
+	<!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+	<!--<a class="carousel-control left" href="#myCarousel" data-slide="prev">-->
+		<!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+	<!--</a>-->
+	<!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
+	<!--<a class="carousel-control right" href="#myCarousel" data-slide="next">-->
+		<!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+	<!--</a>-->
+</div>

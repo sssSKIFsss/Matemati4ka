@@ -1,0 +1,876 @@
+/* =======================================================
+*
+* Template Style
+* Edit this section
+*
+* ======================================================= */
+
+// Template Base
+body {
+	font-family: $font-primary;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 1.5;
+	color: lighten($brand-darker, 20%);
+	color: #7f7f7f;
+	background: $brand-bg-color;
+	height: 100%;
+	position: relative;
+
+}
+a {
+	color: $brand-primary;
+	@include transition(.5s);
+	&:hover, &:active, &:focus {
+		color: $brand-primary;
+		outline: none;
+	}
+}
+p {
+	margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $brand-black;
+	font-family: $font-primary;
+	font-weight: 400;
+	margin: 0 0 30px 0;
+}
+::-webkit-selection {
+	color: $brand-body-color;
+	background: $brand-selection-color;
+}
+
+::-moz-selection {
+	color: $brand-body-color;
+	background: $brand-selection-color;
+}
+
+::selection {
+	color: $brand-body-color;
+	background: $brand-selection-color;
+}
+
+// Edges
+.edge--bottom {
+	@include angle(after);
+}
+
+.edge--bottom--reverse {
+	@include angle(after, true);
+}
+
+.edge--top {
+	@include angle(before);
+}
+
+.edge--top--reverse {
+	@include angle(before, true);
+}
+
+.edge--both {
+	@include angle(both);
+}
+
+.edge--both--reverse {
+	@include angle(both, true);
+}
+
+#fh5co-home {
+	position: relative;
+}
+
+// Slant
+.slant {
+	position: absolute;
+	transform: rotate(-1.7deg);
+	-ms-transform: rotate(-1.7deg);
+	-webkit-transform: rotate(-1.7deg);
+	-o-transform: rotate(-1.7deg);
+	-moz-transform: rotate(-1.7deg);
+	background-color: #fff;
+	content: "";
+	z-index: 3;
+	display: inline-block;
+	height: 70px;
+	bottom: 0;
+	margin-bottom: -35px;
+	padding: 0;
+	width: 101%;
+}
+
+#fh5co-intro {
+	position: relative;
+	bottom: 0;
+	margin-top: -80px;
+	z-index: 10;
+	padding-bottom: 7em;
+	@media screen and (max-width: $screen-sm) {
+		padding-bottom: 3em;
+	}
+	> div {
+		@include flex;
+		@include flexwrap;
+	}
+	.fh5co-block {
+		width: 33.33%;
+		float: left;
+		text-align: center;
+		font-size: 16px;
+		min-height: 300px;
+		vertical-align: middle;
+		padding: 40px;
+		background: $brand-white;
+		-webkit-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+		-moz-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+		-ms-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+		-o-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+		box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+		z-index: 7;
+		flex-grow: 1;
+
+		background-size: cover;
+		position: relative;
+		backgroun-repeat: no-repeat;
+
+		@media screen and (max-width: $screen-sm) {
+			width: 100%;
+		}
+		> .overlay-darker {
+			z-index: 8;
+			opacity: .5;
+			background: #474747;
+
+
+
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		> .overlay {
+			background: $brand-white;
+			opacity: 1;
+			z-index: 9;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			@include transition(.5s);
+		}
+		> .fh5co-text {
+			position: relative;
+			z-index: 10;
+			.fh5co-intro-icon {
+				margin-bottom: 30px;
+				display: inline-block;
+			}
+		}
+		h2 {
+			font-size: 24px;
+			font-weight: 400;
+		}
+
+		&:hover, &:focus {
+			> .overlay {
+				opacity: 0;
+				z-index: 9;
+			}
+			> .fh5co-text {
+				color: $brand-white;
+			}
+			h2 {
+				color: $brand-white;
+			}
+			.btn {
+				border: 2px solid $brand-white!important;
+				background: transparent;
+				&:hover {
+					background: $brand-primary!important;
+					border: 2px solid $brand-primary!important;
+				}
+			}
+		}
+
+	}
+}
+
+.watch-video {
+	text-align: center;
+	width: 100%;
+	display: block;
+	float: left;
+	span {
+		display: block;
+		margin-bottom: 20px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+
+
+#fh5co-services, #fh5co-testimonials, #fh5co-counters, #fh5co-work, #fh5co-contact, #fh5co-about {
+	padding: 4em 0;
+	@media screen and (max-width: $screen-sm) {
+		padding: 2em 0;
+	}
+}
+#fh5co-services, #fh5co-work, #fh5co-counters {
+	padding: 7em 0;
+	@media screen and (max-width: $screen-sm) {
+		padding: 4em 0;
+	}
+}
+#fh5co-services {
+	@include fh5co-gradient;
+	overflow: hidden;
+	position: relative;
+	color: rgba(255,255,255,.7);
+	&:before, &:after {
+		position: absolute;
+		transform: rotate(-1.7deg);
+		-ms-transform: rotate(-1.7deg);
+		-webkit-transform: rotate(-1.7deg);
+		-o-transform: rotate(-1.7deg);
+		-moz-transform: rotate(-1.7deg);
+		background-color: #fff;
+		content: "";
+		z-index: 3;
+		display: inline-block;
+		height: 70px;
+		padding: 0;
+		width: 101%;
+	}
+	&:before {
+		top: 0;
+		margin-top: -35px;
+	}
+	&:after {
+		bottom: 0;
+		margin-bottom: -35px;
+	}
+	.fh5co-service {
+		padding-right: 30px;
+	}
+	h3 {
+		font-size: 24px;
+		color: $brand-white;
+	}
+	.icon {
+		font-size: 70px;
+		margin-bottom: 30px;
+		@include inline-block;
+		&:before {
+			color: $brand-white;
+		}
+	}
+	.section-heading {
+		h2 {
+			color: $brand-white;
+			&.left-border {
+				&:after {
+					background: rgba(255,255,255,.3);
+				}
+			}
+		}
+	}
+}
+
+#fh5co-counters {
+	background: $brand-primary;
+	overflow: hidden;
+	background-color: transparent;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	width: 100%;
+	padding: 9em 0 10em 0;
+	@media screen and (max-width: $screen-sm) {
+		padding: 4em 0;
+	}
+	.fh5co-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+		background: rgba(0,0,0,.7);
+	}
+	&:before, &:after {
+		position: absolute;
+		transform: rotate(-1.7deg);
+		-ms-transform: rotate(-1.7deg);
+		-webkit-transform: rotate(-1.7deg);
+		-o-transform: rotate(-1.7deg);
+		-moz-transform: rotate(-1.7deg);
+		background-color: #fff;
+		content: "";
+		z-index: 3;
+		display: inline-block;
+		height: 70px;
+		padding: 0;
+		width: 101%;
+	}
+	&:before {
+		top: 0;
+		margin-top: -35px;
+	}
+	&:after {
+		bottom: 0;
+		margin-bottom: -35px;
+	}
+	.section-heading {
+		position: relative;
+		z-index: 3;
+		margin-bottom: 0;
+		h2 {
+			color: $brand-white;
+
+			&:after {
+				background: rgba(255,255,255,.3)!important;
+			}
+
+		}
+		.subtext {
+			h3 {
+				color: rgba(255,255,255,.7)!important;
+			}
+		}
+	}
+	.fh5co-counter {
+		position: relative;
+		z-index: 3;
+		text-align: center;
+		@media screen and (max-width: $screen-md) {
+			margin-bottom: 50px;
+			float: left;
+			width: 100%;
+		}
+		.fh5co-counter-icon,
+		.fh5co-counter-number,
+		.fh5co-counter-label {
+			display: block;
+		}
+		.fh5co-counter-icon {
+			font-size: 40px;
+			color: $brand-primary;
+		}
+		.fh5co-counter-number {
+			font-size: 70px;
+			color: $brand-white;
+			font-weight: 300;
+		}
+		.fh5co-counter-label {
+			color: rgba(255,255,255,.5);
+			font-size: 18px;
+			font-weight: 400;
+		}
+	}
+}
+
+#fh5co-testimonials {
+	.box-testimony {
+		margin-bottom: 2em;
+		float: left;
+		a {
+			color: rgba(255,255,255,.5);
+			&:hover, &:focus, &:active {
+				color: rgba(255,255,255,1);
+				text-decoration: none;
+			}
+		}
+		blockquote {
+			padding-left: 0;
+			border-left: none;
+			padding: 30px;
+			background: $brand-white;
+			background: $brand-primary;
+			font-size: 20px;
+			font-weight: 300;
+
+			position: relative;
+			@include border-radius(7px);
+			&:after {
+				content: "";
+				position: absolute;
+				top: 100%;
+				left: 40px;
+				border-top: 10px solid black;
+				border-top-color: $brand-white;
+				border-top-color: $brand-primary;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+			}
+
+			p {
+				font-style: italic;
+				color: $brand-white;
+			}
+		}
+		.author {
+			line-height: 20px;
+			color: rgba(0,0,0,1);
+			font-size: 16px;
+			margin-left: 20px;
+			font-weight: 400;
+			a {
+				color: $brand-primary;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			p {
+				float: left;
+				margin-top: 10px;
+			}
+			.subtext {
+				display: block;
+				color: rgba(0,0,0,.5);
+				font-size: 16px;
+				font-weight: 400!important;
+			}
+		}
+	}
+}
+.testimony__icon {
+	float: left;
+	margin-right: 20px;
+	@include border-radius(50%);
+	background: url(../../../images/sprite.jpg);
+	width: 100px;
+	height: 100px;
+	&.icon1 {
+		background-position: 0 0;
+	}
+	&.icon2 {
+		background-position: 0 200px;
+	}
+	&.icon3 {
+		background-position: 0 100px;
+	}
+}
+
+#fh5co-work {
+	// background: $brand-secondary;
+
+	overflow: hidden;
+	position: relative;
+	color: rgba(255,255,255,.8);
+	@include fh5co-gradient;
+	a {
+		color: rgba(255,255,255,.5);
+		text-decoration: underline;
+		&:hover {
+			color: rgba(255,255,255,1);
+		}
+	}
+	&:before, &:after {
+		position: absolute;
+		transform: rotate(-1.7deg);
+		-ms-transform: rotate(-1.7deg);
+		-webkit-transform: rotate(-1.7deg);
+		-o-transform: rotate(-1.7deg);
+		-moz-transform: rotate(-1.7deg);
+		background-color: #fff;
+		content: "";
+		z-index: 3;
+		display: inline-block;
+		height: 70px;
+		padding: 0;
+		width: 101%;
+	}
+	&:before {
+		top: 0;
+		margin-top: -35px;
+	}
+	&:after {
+		bottom: 0;
+		margin-bottom: -35px;
+	}
+	.section-heading {
+		h2 {
+			color: $brand-white;
+
+			&:after {
+				background: rgba(255,255,255,.3);
+			}
+
+		}
+		h3 {
+			color: rgba(255,255,255,.8);
+		}
+	}
+	.fh5co-project-item {
+		display: block;
+		width: 100%;
+		position: relative;
+		top: 0;
+		background: $brand-white;
+		overflow: hidden;
+		z-index: 9;
+
+		margin-bottom: 30px;
+		@include border-radius(7px);
+		@include transition(.3s);
+
+		img {
+			z-index: 8;
+			opacity: 1;
+			@include transition(.3s);
+		}
+		.fh5co-text {
+			padding: 10px 20px;
+			h2, span {
+				text-decoration: none!important;
+			}
+			h2 {
+				font-size: 18px;
+				font-weight: bold;
+				margin: 0;
+			}
+			span {
+				color: lighten($brand-black, 70%);
+				font-size: 16px;
+				font-weight: 400;
+			}
+		}
+		&:hover, &:focus {
+			-webkit-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4);
+			-moz-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4);
+			-ms-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4);
+			-o-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4);
+			box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4);
+			text-decoration: none;
+			top: -15px;
+			img {
+				opacity: .7;
+			}
+			h2, span {
+				text-decoration: none!important;
+			}
+		}
+	}
+}
+
+.fh5co-person {
+	border: 2px solid lighten($brand-black, 95%);
+	padding: 80px 30px 30px 30px;
+	float: left;
+	width: 100%;
+	position: relative;
+	@media screen and (max-width: $screen-md) {
+		margin-bottom: 3.5em;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		border: 2px solid lighten($brand-black, 95%);
+		@include border-radius(50%);
+		width: 100px;
+		height: 100px;
+		background: url(../../../images/sprite.jpg);
+		top: -50px;
+		margin-left: -50px;
+	}
+	&.icon1:before {
+		background-position: 0 300px;
+	}
+	&.icon2:before {
+		background-position: 0 400px;
+	}
+	&.icon3:before {
+		background-position: 0 500px;
+	}
+	h3 {
+		margin-bottom: 0px;
+	}
+	.fh5co-position {
+		color: lighten($brand-black, 70%);
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+// Forms
+.form-control {
+	box-shadow: none;
+	background: transparent;
+	border: 2px solid rgba(0,0,0,.1);
+	height: 54px;
+	font-size: 18px;
+	font-weight: 400;
+	// &:hover
+	&:active, &:focus {
+		outline: none;
+		box-shadow: none;
+		border-color: $brand-primary;
+	}
+}
+.btn {
+	@include transition(.5s);
+	&:hover, &:active, &:focus {
+		outline: none;
+	}
+}
+#fh5co-contact {
+	// Contacts
+	padding-bottom: 0;
+	.fh5co-contact-info {
+		// color: rgba(255,255,255,.7);
+		padding: 0;
+		margin: 0 0 1.5em 0;
+		li {
+			position: relative;
+			padding: 0;
+			margin: 0 0 1.5em 0;
+			padding-left: 50px;
+			list-style: none;
+
+			i {
+				position: absolute;
+				top: .2em;
+				left: 0;
+			}
+		}
+	}
+}
+
+.section-heading {
+	float: left;
+	width: 100%;
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	clear: both;
+	h2 {
+		margin: 0 0 30px 0;
+		font-size: 50px;
+		font-weight: 300;
+		color: #444;
+		text-transform: uppercase;
+		position: relative;
+		display: block;
+		padding-bottom: 20px;
+		line-height: 1.5;
+		&.left-border {
+			&:after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 80px;
+				height: 2px;
+				background: $brand-primary;
+				left: 0%;
+				margin-left: 0px;
+				bottom: 0;
+			}
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 80px;
+			height: 2px;
+			background: $brand-primary;
+			left: 50%;
+			margin-left: -40px;
+			bottom: 0;
+		}
+		@media screen and (max-width: $screen-sm) {
+			font-size: 30px;
+		}
+	}
+	h3 {
+		font-weight: 300;
+		line-height: 1.5;
+		color: #929292;
+		@media screen and (max-width: $screen-sm) {
+			font-size: 24px!important;
+			line-height: 34px;
+		}
+	}
+}
+
+.btn {
+	@include transition(.3s);
+}
+
+// Burger Menu
+.fh5co-nav-toggle {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	text-decoration: none;
+	&.active i {
+		&::before, &::after {
+			background: $brand-primary;
+		}
+	}
+	&:hover, &:focus, &:active {
+		outline: none;
+		border-bottom: none!important;
+	}
+	i {
+		position: relative;
+		@include inline-block;
+		width: 25px;
+		height: 3px;
+		color: $brand-primary;
+		font:bold 14px/.4 Helvetica;
+		text-transform: uppercase;
+		text-indent:-55px;
+		background: $brand-primary;
+		transition: all .2s ease-out;
+		&::before, &::after {
+			content:'';
+			width: 25px;
+			height: 3px;
+			background: $brand-primary;
+			position: absolute;
+			left:0;
+			@include transition(.2s);
+		}
+	}
+}
+
+.fh5co-nav-toggle i::before {
+	top: -7px;
+}
+.fh5co-nav-toggle i::after {
+	bottom: -7px;
+}
+.fh5co-nav-toggle:hover i::before {
+	top: -10px;
+}
+.fh5co-nav-toggle:hover i::after {
+	bottom: -10px;
+}
+.fh5co-nav-toggle.active i {
+	background: transparent;
+}
+.fh5co-nav-toggle.active i::before {
+	top:0;
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+.fh5co-nav-toggle.active i::after {
+	bottom:0;
+	-webkit-transform: rotateZ(-45deg);
+	-moz-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	-o-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+}
+.fh5co-nav-toggle {
+	position: absolute;
+	top: 2px;
+	right: 0px;
+	z-index: 21;
+	padding: 6px 0 0 0;
+	display: block;
+	margin: 0 auto;
+	display: none;
+	height: 44px;
+	width: 25px;
+	border-bottom: none!important;
+	@media screen and (max-width: $screen-sm) {
+		display: block;
+	}
+}
+
+.btn {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	@include transition(.3s);
+	&.btn-primary {
+		background: $brand-primary;
+		color: $brand-white;
+		border: none!important;
+		border: 2px solid transparent!important;
+		&:hover, &:active, &:focus {
+			box-shadow: none;
+			background: $brand-primary;
+		}
+	}
+	&:hover, &:active, &:focus {
+		background: #393e46!important;
+		color: $brand-white;
+		outline: none!important;
+	}
+	&.btn-default {
+		&:hover, &:focus, &:active {
+			border-color: transparent;
+		}
+	}
+}
+
+// Magnific Popup
+// Zoom
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+	opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+.js .to-animate,
+.js .to-animate-2,
+.js .single-animate {
+	opacity: 0;
+}
+
+// Helper Class
+.col-xxs-12 {
+	@media screen and (max-width: 480px) {
+		float: none;
+		width: 100%;
+	}
+}
+.row-bottom-padded-lg {
+	padding-bottom: 7em;
+	@media screen and (max-width: $screen-sm ) {
+		padding-bottom: 2em;
+	}
+}
+.row-bottom-padded-md {
+	padding-bottom: 4em;
+	@media screen and (max-width: $screen-sm ) {
+		padding-bottom: 2em;
+	}
+}
+.row-bottom-padded-sm {
+	padding-bottom: 2em;
+	@media screen and (max-width: $screen-sm ) {
+		padding-bottom: 2em;
+	}
+}
+
+// Menu bar Animate
+.fh5co-animated {
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}

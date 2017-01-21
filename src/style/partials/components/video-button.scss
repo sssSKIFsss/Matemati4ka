@@ -1,0 +1,35 @@
+// Video button
+.watch-video {
+	.btn-video {
+		display: block;
+		position: relative;
+		height: 120px;
+		width: 120px;
+		margin: 0 auto;
+		line-height: 0;
+		border: 2px solid $brand-primary;
+		@include border-radius(50%);
+		&:hover, &:focus, &:active {
+			i {
+				margin-left: 3px;
+				-webkit-transform: scale(1.2);
+				-moz-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+				-o-transform: scale(1.2);
+				transform: scale(1.2);
+			}
+		}
+		i {
+			position: absolute;
+			display: block;
+			border: 30px solid transparent; /* прозрачные границы */
+			border-left: 50px solid $brand-primary; /* добавляем треугольник */
+			left: 35%;
+			top: 24%;
+			margin: 0;
+			padding: 0;
+			right: -9px;
+			@include transition(.3s);
+		}
+	}
+}

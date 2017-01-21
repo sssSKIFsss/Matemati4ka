@@ -1,0 +1,51 @@
+// Social buttons
+.social {
+	padding: 0;
+	margin: 0;
+	li {
+		padding: 0;
+		margin: 0 4px;
+		list-style: none;
+		display: inline-block;
+		position: relative;
+		width: 40px;
+		height: 40px;
+		a {
+			display: block;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			margin: 0 auto;
+			vertical-align: middle;
+			i {
+				position: absolute;
+				top: 10px;
+				left: 8px;
+				margin: 0 auto;
+			}
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+				border-bottom: none;
+			}
+			&:hover {
+				background: var(--brand-white);
+				-webkit-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				-o-transform: scale(1.1);
+				transform: scale(1.1);
+				-webkit-box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.6);
+				-moz-box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.6);
+				box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.6);
+			}
+		}
+	}
+	&.social-circle {
+		a {
+			background: var(--brand-gray);
+			//noinspection SassScssResolvedByNameOnly
+			@include border-radius(50%);
+		}
+	}
+}
+//
