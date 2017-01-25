@@ -28,6 +28,9 @@
 	/* ------ настройки для magnific-popup ------ */
 		//= partials/magnific-popup-options.js
 
+	/* ---- форма обратной связи через email ---- */
+		//= partials/feedback-form.js
+
 	/* ------ Google Map ------ */
 		//= partials/google_map.js
 

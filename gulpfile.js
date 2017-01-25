@@ -16,7 +16,8 @@ var path = {
 		css: 'build/css/',
 		images: 'build/img/',
 		photos: 'build/photos/',
-		fonts: 'build/fonts/'
+		fonts: 'build/fonts/',
+		php: 'build/feedback/'
 	},
 	src: { // Пути откуда брать исходники
 		htaccess: '.htaccess',
@@ -27,7 +28,8 @@ var path = {
 	 	images: 'src/images/*.{png,jpg,gif}',
 		photos: 'src/photos/*.*',
 		svg_sprite: 'src/images/sprites/svg/*.svg',
-		fonts: 'src/fonts/**/*.*'
+		fonts: 'src/fonts/**/*.*',
+		php: 'src/feedback/**/*.php'
 	},
 	tmp: { // Место хранения временных файлов
 		style: 'tmp/style/'
@@ -46,7 +48,8 @@ var path = {
 		images: 'src/images/**/*.{png,jpg,gif}',
 		photos: 'src/photos/*.*',
 		svg_images: 'src/images/svg/*.svg',
-		fonts: 'src/fonts/**/*.*'
+		fonts: 'src/fonts/**/*.*',
+		php: 'src/feedback/**/*.php'
 	}
 };
 
@@ -85,6 +88,18 @@ lazyRequireTask('htaccess:copy', './gulp_tasks/copy', {
 lazyRequireTask('favicon:copy', './gulp_tasks/copy', {
 	src: path.src.favicon,
 	dst: path.build.html
+});
+
+// Перенос фотографий:
+lazyRequireTask('fonts:copy', './gulp_tasks/copy', {
+	src: path.src.fonts,
+	dst: path.build.fonts
+});
+
+// Перенос php:
+lazyRequireTask('php:copy', './gulp_tasks/copy', {
+	src: path.src.php,
+	dst: path.build.php
 });
 
 // Сборка html:
@@ -127,12 +142,6 @@ lazyRequireTask('svg_sprite:build', './gulp_tasks/svg_sprite', {
 	tmp: path.tmp.style
 });
 
-// Перенос шрифтов:
-lazyRequireTask('fonts:copy', './gulp_tasks/copy', {
-	src: path.src.fonts,
-	dst: path.build.fonts
-});
-
 // Такс, объединяющий все вышеприведенные:
 gulp.task('build', gulp.series(
 	'clean',
@@ -142,6 +151,7 @@ gulp.task('build', gulp.series(
 		'favicon:copy',
 		'fonts:copy',
 		'photos:copy',
+		'php:copy',
 		'images:build',
 		'js:build',
 		'css:build'
@@ -157,6 +167,7 @@ gulp.task('build', gulp.series(
 			gulp.watch(path.watch.images, gulp.series('images:build'));
 			gulp.watch(path.watch.svg_images, gulp.series('svg_sprite:build'));
 			gulp.watch(path.watch.fonts, gulp.series('fonts:copy'));
+			gulp.watch(path.watch.php, gulp.series('php:copy'));
 		});
 
 	// Итоговый таск - Development
